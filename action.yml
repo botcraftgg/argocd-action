@@ -1,0 +1,15 @@
+name: 'ArgoCD'
+description: 'GitHub Action for ArgoCD'
+inputs:
+  server:
+    description: 'ArgoCD server'
+    required: true
+  token:
+    description: 'Access token'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    ARGOCD_SERVER: ${{ inputs.server }}
+    ARGOCD_TOKEN: ${{ inputs.token }}
