@@ -1,3 +1,3 @@
 #!/bin/sh -l
 
-argocd --grpc-web --server "${ARGOCD_SERVER}" --token "${ARGOCD_TOKEN}" "$@"
+argocd --grpc-web --server "${ARGOCD_SERVER}" --auth-token "${ARGOCD_TOKEN}" "$@"
